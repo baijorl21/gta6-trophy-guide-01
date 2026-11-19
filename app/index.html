@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missable flags and sourced guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-text">
+    <h1>Leonida Legend</h1>
+    <p class="subtitle">Grand Theft Auto VI · PlayStation 5 trophy guide &amp; tracker — all 55 trophies, offline</p>
+  </div>
+  <div class="progress-summary" id="progress-summary">
+    <div class="progress-big"><span id="earned-count">0</span><span class="progress-of">/55 earned</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Overall trophy progress"><div class="progress-fill" id="overall-fill"></div></div>
+    <div class="grade-bars" id="grade-bars"></div>
+  </div>
+</header>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-intro">Seven stages, in the order that wastes the least time. Click a stage to filter the checklist to it.</p>
+  <div class="stage-grid" id="stage-grid"></div>
+</section>
+
+<section class="toolbar" aria-label="Tracker controls">
+  <div class="toolbar-row">
+    <label class="search-box">Search
+      <input type="search" id="search" placeholder="Trophy name or keyword…" autocomplete="off">
+    </label>
+    <label>Grade
+      <select id="grade-filter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Status
+      <select id="status-filter">
+        <option value="all">All</option>
+        <option value="earned">Earned</option>
+        <option value="remaining">Remaining</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle">
+      <input type="checkbox" id="spoiler-toggle">
+      <span>Spoiler shield <small>(hide story trophies until earned)</small></span>
+    </label>
+  </div>
+  <div class="toolbar-row">
+    <div class="kind-chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip is-active" data-kind="all">All kinds</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="missable">⚠ Missable</button>
+      <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="chip" data-kind="activities">Activities</button>
+      <button type="button" class="chip" data-kind="meta">Meta</button>
+    </div>
+    <div class="progress-actions">
+      <button type="button" id="export-progress">Export progress</button>
+      <label class="import-label">Import progress
+        <input type="file" id="import-progress" accept="application/json">
+      </label>
+      <button type="button" id="reset-progress" class="danger">Reset</button>
+    </div>
+  </div>
+  <p class="result-count" id="result-count"></p>
+</section>
+
+<main>
+  <div class="trophy-list" id="trophy-list"></div>
+  <p class="empty-state" id="empty-state" hidden>No trophies match the current filters.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Trophy names, descriptions and grades are the official PlayStation 5 list for Grand Theft Auto VI, as listed by Exophase and PSNProfiles. Every guide is written for this tracker from those official descriptions and names its sources; where a description is cryptic, the guide says so instead of inventing steps.</p>
+  <p>Progress is saved in your browser (localStorage) and never leaves this device. Export it to a file to back it up or move it.</p>
+</footer>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
